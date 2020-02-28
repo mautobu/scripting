@@ -25,8 +25,7 @@ if [[ $action == "mv" && ! -d "$destination" ]]; then echo Destination folder fo
 itemsCount=`xmllint --xpath 'count(//MediaContainer/Video)' .wtf.txt`
 declare -a tt=( )
 declare -a tg=( )
-for (( i=177; $i <= $itemsCount; i++ )); do
-#for (( i=1; $i <= $itemsCount; i++ )); do
+for (( i=1; $i <= $itemsCount; i++ )); do
  bob=`xmllint --xpath 'count(//MediaContainer/Video['$i']/Media)' .wtf.txt`
  h=0
  if [[ $bob -gt "1" ]]; then
