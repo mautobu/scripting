@@ -86,4 +86,6 @@ for (( i=177; $i <= $itemsCount; i++ )); do
   done
  fi
 done
+curl http://$host:$port/library/sections/$section/refresh?X-Plex-Token=$token
+
 exit
