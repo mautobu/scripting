@@ -86,5 +86,5 @@ for (( i=1; $i <= $itemsCount; i++ )); do
  fi
 done
 curl http://$host:$port/library/sections/$section/refresh?X-Plex-Token=$token
-
+rm -f .wtf.txt
 exit
