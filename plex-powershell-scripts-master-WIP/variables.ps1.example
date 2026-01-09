@@ -1,0 +1,33 @@
+### get-plexservers.ps1
+# In preparration for comparing or downloading libraries, get server name, ip, port, and api token.
+$YourAPItoken="[api string]"
+
+### refresh-plexlibraries.ps1 variables
+# Script will refresh libraries of content type specified. Best run with task scheduler.
+# Your plex server web dashboard url
+$PMS="http://[your plex server ip/hostname]:[port, default is 32400]"
+# The API Token for your plex server. Docs to find it: https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/
+$APItoken="[api string]"
+
+### compare-libraries.ps1 variables
+# Compare 2 full plex libraries. Slow af.
+# Your plex server web dashboard url
+$LocalPMS="http://[your plex server ip/hostname]:[port, default is 32400]"
+# The API Token for your plex server
+$LocalAPI="[local api string]"
+# Plex server web dashboard url of remote server you wish to compare against. https://plex.tv/api/servers?X-Plex-Token=[local api string] will bring up available servers with api keys.$RemotePMS="http://[remote plex server ip/hostname]:[port, default is 32400]"
+# The API Token for remote plex server
+$RemoteAPI="[remote api string]"
+# Produced download script will target this as the parent directory for MIA library content.
+$downloadlocation="$env:USERPROFILE\Downloads"
+
+### rip-spotifyforlidarr.ps1 variables
+# Get it by clicking Get Token then OK on this link https://developer.spotify.com/console/get-search-item/
+$spotifyoauth="Big old string"
+# Lidarr system info
+$lidarrapikey="api key"
+$lidarrhost="http://somelidarrhost"
+# number of entries in json. If your system can't handle it, set it lower and run it in batches.
+$lidarrpagesize="500"
+# Desired location for albums ripped.
+$riproom="$env:userprofile\music"
